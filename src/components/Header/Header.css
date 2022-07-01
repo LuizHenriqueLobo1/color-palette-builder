@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 .header {
+  position: fixed;
   display: flex;
   justify-content: space-between;
   width: 100%;
   height: 80px;
   background: #292929;
-  border-bottom: 1px solid #FAFAFA;
 }
 
 .header-title {

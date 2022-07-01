@@ -1,0 +1,22 @@
+.build-container {
+  display: flex;
+}
+
+.build-color {
+  margin:  0;
+  padding: 0;
+  width: 20%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.build-color-content {
+  font-family: 'Consolas';
+  padding: 10px;
+  height: 20px;
+  border-radius: 10px;
+  background: #FAFAFA;
+  margin-top: 100px;
+  cursor: pointer;
+}
