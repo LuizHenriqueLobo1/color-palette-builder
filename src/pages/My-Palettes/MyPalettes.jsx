@@ -17,7 +17,7 @@ export default function MyPalettes() {
       <div className='my-palettes-content'>
         {
           palettes.length 
-            ? palettes.map(palette => <Palette palette={ palette } />)
+            ? palettes.map((palette, index) => <Palette key={ index } palette={ palette } />)
             : <div className='my-palettes-warning'>
                 <h1>
                   <AiFillWarning className='icon'/>
