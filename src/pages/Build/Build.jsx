@@ -1,5 +1,6 @@
 import './Build.css';
 import { useEffect, useState } from 'react';
+import { generateColorArray } from '../../utils/utils.js';
 
 export default function Build() {
 
@@ -10,14 +11,6 @@ export default function Build() {
       if(code === 'Space') setColors(generateColorArray());
     }
   }, []);
-
-  function generateColorArray() {
-    const colorArray = Array(5).fill('#FAFAFA');
-    colorArray.forEach((_, index) => {
-      colorArray[index] = '#'.concat(Math.floor(Math.random() * 16777215).toString(16).toUpperCase());
-    });
-    return colorArray;
-  }
 
   return (
     <div className='build-container'>
