@@ -1,6 +1,4 @@
-<h1 style="text-align: center;">
-  Color Palette Builder
-</h1>
+# Color Palette Builder
 
 ### Sobre
 
@@ -15,15 +13,6 @@
 - [ ] Filtragem de paletas
 - [x] Página de ajuda
 
-### Demonstração
-
-![Build Page](https://github.com/LuizHenriqueLobo1/Color-Palette-Builder/tree/main/assets/Color_Palette_Builder_Build.png)
-
 ---
 
-<p style="text-align: center;">
-  Made by 
-    <a href="https://github.com/luizhenriquelobo1">
-      Luiz Henrique Lobo
-    </a>
-</p>
+Made by [Luiz Henrique Lobo](https://github.com/luizhenriquelobo1)
