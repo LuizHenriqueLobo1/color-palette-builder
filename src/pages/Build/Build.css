@@ -10,7 +10,18 @@
   width: 20%;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.build-color-locker {
+  padding: 5px;
+  border-radius: 10px;
+  background: #FAFAFA;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14pt;
 }
 
 .build-color-content {

@@ -7,7 +7,8 @@
 ### Funcionalidades
 
 - [x] Gerar paleta aleatória
-- [ ] Trancar cores escolhidas
+- [x] Trancar cores escolhidas
+- [ ] Copiar cor ao clicar
 - [x] Salvar paleta gerada
 - [ ] Excluir paleta salva
 - [ ] Filtragem de paletas
