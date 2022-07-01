@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.my-palettes-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.my-palettes-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.my-palettes-warning {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 100px;
+  font-family: 'Montserrat';
+}
+
+.my-palettes-warning > h1 {
+  margin-bottom: 0px;
+}
