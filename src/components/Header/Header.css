@@ -19,7 +19,7 @@
   cursor: default;
 }
 
-.header-anchors {
+.header-anchors-container {
   color: #FAFAFA;
   font-family: 'Montserrat';
   font-size: 1rem;
@@ -27,12 +27,13 @@
   margin-right: 20px;
 }
 
-.header-anchors > span {
+.header-anchor {
   margin-left: 10px;
-  cursor: pointer;
+  color: #FAFAFA;
+  text-decoration: none;
 }
 
-.header-anchors > span:hover {
+.header-anchor:hover {
   transition: 500ms;
-  color: #A1C7C7;
+  color: #95C5E3;
 }

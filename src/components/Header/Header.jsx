@@ -1,4 +1,5 @@
 import './Header.css';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   return (
@@ -6,16 +7,16 @@ export default function Header() {
       <h1 className='header-title'>
         Color Palette Builder
       </h1>
-      <div class='header-anchors'>
-        <span>
+      <div className='header-anchors-container'>
+        <Link className='header-anchor' to='/'>
           Build
-        </span>
-        <span>
+        </Link>
+        <Link className='header-anchor' to='/my-palettes'>
           My Palettes
-        </span>
-        <span>
+        </Link>
+        <Link className='header-anchor' to='/help'>
           Help
-        </span>
+        </Link>
       </div>
     </div>
   );
