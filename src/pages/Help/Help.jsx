@@ -1,4 +1,5 @@
 import './Help.css';
+import { MdOutlineHelp } from 'react-icons/md';
 
 export default function MyPalettes() {
   return (
@@ -6,11 +7,14 @@ export default function MyPalettes() {
       <div className='help-content'>
         <div className='help-card'>
           <div className='help-card-header'>
-            <h2 className='help-card-header-title'>How to use?</h2>
+            <h1>
+              <MdOutlineHelp className='icon' />
+            </h1>
+            <h2>How to use?</h2>
             <p>
               On the <b>Build</b> page, press <b>space</b> to generate a new palette.
             </p>
-            <h2 className='help-card-header-title'>
+            <h2>
               How to save a palette?
             </h2>
             <p>
