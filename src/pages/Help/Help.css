@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.help-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat';
+  cursor: default;
+}
+
+.help-content {
+  margin-top: 100px;
+}
+
+.help-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  border: 1px solid #DEDEDE;
+  border-radius: 10px;
+}
+
+.help-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.help-card-header-title {
+  margin-bottom: 0px;
+  font-size: 20pt;
+}
+
+.help-card-header > p {
+  margin-bottom: 0px;
+}
+
+.help-card-footer {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #DEDEDE;
+  width: 500px;
+}
