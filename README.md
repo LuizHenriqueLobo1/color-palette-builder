@@ -10,7 +10,7 @@
 - [x] Trancar cores escolhidas
 - [ ] Copiar cor ao clicar
 - [x] Salvar paleta gerada
-- [ ] Excluir paleta salva
+- [x] Excluir paleta salva
 - [ ] Filtragem de paletas
 - [x] Página de ajuda
 

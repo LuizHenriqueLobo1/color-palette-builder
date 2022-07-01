@@ -1,9 +1,31 @@
 .palette-container {
   display: flex;
+  flex-direction: column;  
+}
+
+.palette-content {
+  display: flex;
   flex-direction: row;
   width: 400px;
   height: 250px;
-  margin-bottom: 20px;
+}
+
+.palette-header {
+  text-align: right;
+}
+
+.palette-delete {
+  cursor: pointer;
+}
+
+.palette-delete:hover {
+  background: #292929;
+  border-radius: 3px;
+  color: #FAFAFA;
+}
+
+.palette-delete > .icon {
+  margin-bottom: 3px;
 }
 
 .palette-color {
