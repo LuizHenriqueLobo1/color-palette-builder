@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 .build-container {
   display: flex;
 }
@@ -9,6 +11,7 @@
   height: 100vh;
   display: flex;
   justify-content: center;
+  
 }
 
 .build-color-content {
@@ -19,4 +22,26 @@
   background: #FAFAFA;
   margin-top: 100px;
   cursor: pointer;
+}
+
+.build-button-save {
+  position: fixed;
+  top: 92%;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Montserrat';
+  cursor: pointer;
+  background: #FAFAFA;
+  font-size: 12pt;
+}
+
+.build-button-save:hover {
+  transition: 250ms;
+  background: #292929;
+  color: #FAFAFA;
+}
+
+.build-button-save > span {
+  margin-left: 5px;
 }

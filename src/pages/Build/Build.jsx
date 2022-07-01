@@ -1,6 +1,7 @@
 import './Build.css';
 import { useEffect, useState } from 'react';
 import { generateColorArray } from '../../utils/utils.js';
+import { MdSave } from 'react-icons/md';
 
 export default function Build() {
 
@@ -28,6 +29,12 @@ export default function Build() {
         <div className='build-color-content'>
           { colors[2] }
         </div>
+        <button className='build-button-save'>
+          <MdSave className='icon' />
+          <span>
+            Save Palette
+          </span>
+        </button>
       </div>
       <div className='build-color' style={{ background: colors[3] }}>
         <div className='build-color-content'>
