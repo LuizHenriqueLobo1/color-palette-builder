@@ -22,5 +22,5 @@
 ---
 
 <p align="center">
-  Made by <a href="www.https://github.com/luizhenriquelobo1" target="_blank"> Luiz Henrique Lobo</a>
+  Made by <a href="https://github.com/luizhenriquelobo1/" target="_blank">Luiz Henrique Lobo</a>
 </p>
