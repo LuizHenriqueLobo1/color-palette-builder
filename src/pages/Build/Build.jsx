@@ -83,7 +83,15 @@ export default function Build() {
             }
           </div>
         </div>
-        <button className='build-button-save' onClick={ () => saveNewPalette(colors) }>
+        <button 
+          className='build-button-save'
+          onClick={ 
+            () => { 
+              saveNewPalette(colors);
+              document.querySelector('.build-button-save').blur();
+            }
+          }
+        >
           <MdSave className='icon' />
           <span>
             Save Palette

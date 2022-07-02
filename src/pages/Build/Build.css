@@ -44,6 +44,7 @@
   cursor: pointer;
   background: #FAFAFA;
   font-size: 12pt;
+  outline: none;
 }
 
 .build-button-save:hover {
