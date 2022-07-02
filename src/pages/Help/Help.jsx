@@ -1,5 +1,5 @@
 import './Help.css';
-import { MdOutlineHelp } from 'react-icons/md';
+import { MdHelpCenter } from 'react-icons/md';
 
 export default function MyPalettes() {
   return (
@@ -8,7 +8,7 @@ export default function MyPalettes() {
         <div className='help-card'>
           <div className='help-card-header'>
             <h1>
-              <MdOutlineHelp className='icon' />
+              <MdHelpCenter className='icon' style={{ color: '#292929' }} />
             </h1>
             <h2>How to use?</h2>
             <p>
@@ -19,6 +19,12 @@ export default function MyPalettes() {
             </h2>
             <p>
               On the <b>Build</b> page, there is a <b>Save Palette</b> button,<br/> click on it to save your palette and check in <b>My Palettes</b>.
+            </p>
+            <h2>
+              How to delete a palette?
+            </h2>
+            <p>
+              On the <b>My Palettes</b> page, there is a trash icon,<br/> click on it to delete the palette.
             </p>
           </div>
           <div className='help-card-footer'>
