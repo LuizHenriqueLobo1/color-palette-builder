@@ -8,7 +8,7 @@
 
 - [x] Gerar paleta aleatória
 - [x] Trancar cores escolhidas
-- [ ] Copiar cor ao clicar
+- [x] Copiar cor ao clicar
 - [x] Salvar paleta gerada
 - [x] Excluir paleta salva
 - [ ] Filtragem de paletas

@@ -1,6 +1,6 @@
 import './Build.css';
 import { useEffect, useState } from 'react';
-import { generateColorArray, saveNewPalette } from '../../utils/utils.js';
+import { generateColorArray, saveNewPalette, copyHexColor } from '../../utils/utils.js';
 import { MdSave, MdLockOpen, MdLockOutline } from 'react-icons/md';
 
 export default function Build() {
@@ -44,7 +44,9 @@ export default function Build() {
     <div className='build-container'>
       <div className='build-color' style={{ background: colors[0] }}>
         <div className='build-color-content'>
-          <div>{ colors[0] }</div>
+          <div onClick={ () => copyHexColor(colors[0]) }>
+            { colors[0] }
+          </div>
           <div className='build-color-locker' onClick={ () => lockColor(0) }>
             {
               isActive[0]
@@ -56,7 +58,9 @@ export default function Build() {
       </div>
       <div className='build-color' style={{ background: colors[1] }}>
         <div className='build-color-content'>
-          <div>{ colors[1] }</div>
+          <div onClick={ () => copyHexColor(colors[1]) }>
+            { colors[1] }
+          </div>
           <div className='build-color-locker' onClick={ () => lockColor(1) }>
             {  
               isActive[1]
@@ -68,7 +72,9 @@ export default function Build() {
       </div>
       <div className='build-color' style={{ background: colors[2] }}>
         <div className='build-color-content'>
-          <div>{ colors[2] }</div>
+          <div onClick={ () => copyHexColor(colors[2]) }>
+            { colors[2] }
+          </div>
           <div className='build-color-locker' onClick={ () => lockColor(2) }>
             {  
               isActive[2]
@@ -86,7 +92,9 @@ export default function Build() {
       </div>
       <div className='build-color' style={{ background: colors[3] }}>
         <div className='build-color-content'>
-          <div>{ colors[3] }</div>
+          <div onClick={ () => copyHexColor(colors[3]) }>
+            { colors[3] }
+          </div>
           <div className='build-color-locker' onClick={ () => lockColor(3) }>
             {  
               isActive[3]
@@ -98,7 +106,9 @@ export default function Build() {
       </div>
       <div className='build-color' style={{ background: colors[4] }}>
         <div className='build-color-content'>
-          <div>{ colors[4] }</div>
+          <div onClick={ () => copyHexColor(colors[4]) }>
+            { colors[4] }
+          </div>
           <div className='build-color-locker' onClick={ () => lockColor(4) }>
             {  
               isActive[4]
