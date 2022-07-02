@@ -1,4 +1,6 @@
-# Color Palette Builder
+<h1 align="center">
+  Color Palette Builder
+</h1>
 
 ### Sobre
 
@@ -16,4 +18,8 @@
 
 ---
 
-Made by [Luiz Henrique Lobo](https://github.com/luizhenriquelobo1)
+<p align="center">
+  Made by <a href="www.https://github.com/luizhenriquelobo1" target="_blank" target="_blank">
+    Luiz Henrique Lobo
+  </a>
+</p>
