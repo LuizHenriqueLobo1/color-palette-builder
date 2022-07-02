@@ -41,6 +41,8 @@
 }
 
 .help-card-header > p {
+  margin-left: 20px;
+  margin-right: 20px;
   margin-bottom: 0px;
 }
 
