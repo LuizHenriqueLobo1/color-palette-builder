@@ -10,21 +10,27 @@ export default function MyPalettes() {
             <h1>
               <MdHelpCenter className='icon' style={{ color: '#292929' }} />
             </h1>
-            <h2>How to change palette?</h2>
+            <h2>Change Palette</h2>
             <p>
               On the <b>Build</b> page, press <b>space</b> to generate a new palette.
             </p>
             <h2>
-              How to save a palette?
+              Save Palette
             </h2>
             <p>
               On the <b>Build</b> page, there is a <b>Save Palette</b> button, click on it to save your palette and check in <b>My Palettes</b>.
             </p>
             <h2>
-              How to delete a palette?
+              Delete Palette
             </h2>
             <p>
               On the <b>My Palettes</b> page, there is a trash icon, click on it to delete the palette.
+            </p>
+            <h2>
+              Copy color of Palette
+            </h2>
+            <p>
+              Click on the <b>hex decimal code</b> of any color to copy it to the clipboard.
             </p>
           </div>
           <div className='help-card-footer'>
