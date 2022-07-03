@@ -5,13 +5,31 @@
   flex-direction: column;
 }
 
+.my-palettes-actions {
+  background: #353535;
+  color: #FAFAFA;
+  font-family: 'Montserrat';
+  margin-top: 80px;
+  padding: 8px;
+  text-align: right;
+}
+
+.my-palettes-actions-select {
+  margin-left: 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: 'Montserrat';
+}
+
 .my-palettes-content {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 20px;
 }
 
 .my-palettes-warning {

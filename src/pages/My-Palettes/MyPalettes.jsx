@@ -1,19 +1,34 @@
 import './MyPalettes.css';
 import { useEffect, useState } from 'react';
-import { getSavedPalettes } from '../../utils/utils.js';
+import { getSavedPalettes, getFavoritesPalettes } from '../../utils/utils.js';
 import Palette from '../../components/Palette/Palette.jsx';
 import { AiFillWarning } from 'react-icons/ai';
 
 export default function MyPalettes() {
 
   const [palettes, setPalettes] = useState([]);
+  const [filter, setFilter] = useState('all');
 
   useEffect(() => {
-    setPalettes(getSavedPalettes());
-  }, []);
+    setPalettes(
+      filter === 'all' 
+        ? getSavedPalettes() 
+        : getFavoritesPalettes()
+    );
+  }, [ filter ]);
 
   return (
     <div className='my-palettes-container'>
+      <div className='my-palettes-actions'>
+        Show:
+        <select 
+          className='my-palettes-actions-select'
+          onChange={ (event) => setFilter(event.target.value) }
+        >
+          <option value="all" selected>All</option>
+          <option value="favorites">Favorites</option>
+        </select>
+      </div>
       <div className='my-palettes-content'>
         {
           palettes.length 

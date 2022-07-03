@@ -51,6 +51,10 @@ export function favoritePalette(palette) {
   localStorage.setItem('palettes', JSON.stringify(palettes));
 }
 
+export function getFavoritesPalettes() {
+  return getSavedPalettes().filter(palette => palette.favorite);
+}
+
 function getSpecificPalette(palettes, palette) {
   return palettes.find(({ id }) => id === palette.id);
 }
