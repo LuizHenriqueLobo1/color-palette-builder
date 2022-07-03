@@ -1,17 +1,33 @@
 import './Palette.css';
 import { IoMdTrash } from 'react-icons/io';
-import { getSavedPalettes, deleteSavedPalette, copyHexColor } from '../../utils/utils';
+import { MdStar, MdStarBorder } from 'react-icons/md';
+import { getSavedPalettes, deleteSavedPalette, favoritePalette, copyHexColor } from '../../utils/utils';
 
 export default function Palette({ palette, setPalettes }) {
   return (
     <div className='palette-container'>
       <div className='palette-header'>
         <span 
-          className='palette-delete' 
+          className='palette-action'
+          onClick={ 
+            () => {
+              favoritePalette(palette);
+              setPalettes(getSavedPalettes());
+            }
+          }
+        >
+          {
+            palette.favorite
+              ? <MdStar className='icon'/>
+              : <MdStarBorder className='icon'/>
+          }
+        </span>
+        <span 
+          className='palette-action' 
           onClick={ 
             () => {
               deleteSavedPalette(palette);
-              setPalettes(getSavedPalettes()); 
+              setPalettes(getSavedPalettes());
             }
           }
         >

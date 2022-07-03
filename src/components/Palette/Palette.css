@@ -14,17 +14,17 @@
   text-align: right;
 }
 
-.palette-delete {
+.palette-action {
   cursor: pointer;
 }
 
-.palette-delete:hover {
+.palette-action:hover {
   background: #292929;
   border-radius: 3px;
   color: #FAFAFA;
 }
 
-.palette-delete > .icon {
+.palette-action > .icon {
   margin-bottom: 3px;
 }
 

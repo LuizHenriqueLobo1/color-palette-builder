@@ -17,7 +17,8 @@ export function getSavedPalettes() {
 export function saveNewPalette(palette) {
   const newPalette = {
     id: generateId(),
-    colors: palette
+    colors: palette,
+    favorite: false
   };
   const palettes = [...getSavedPalettes(), newPalette];
   localStorage.setItem('palettes', JSON.stringify(palettes));
@@ -32,11 +33,24 @@ function generateId() {
 
 export function deleteSavedPalette(palette) {
   const palettes = getSavedPalettes();
-  const targetPalette = palettes.find(({ id }) => id === palette.id);
+  const targetPalette = getSpecificPalette(palettes, palette);
+  console.log(palettes.indexOf(targetPalette));
   palettes.splice(palettes.indexOf(targetPalette), 1);
   localStorage.setItem('palettes', JSON.stringify(palettes));
 }
 
 export function copyHexColor(color) {
   navigator.clipboard.writeText(color);
+}
+
+export function favoritePalette(palette) {
+  const palettes = getSavedPalettes();
+  const targetPalette = getSpecificPalette(palettes, palette);
+  const targetPaletteIndex = palettes.indexOf(targetPalette); 
+  palettes[targetPaletteIndex].favorite = !palettes[targetPaletteIndex].favorite; 
+  localStorage.setItem('palettes', JSON.stringify(palettes));
+}
+
+function getSpecificPalette(palettes, palette) {
+  return palettes.find(({ id }) => id === palette.id);
 }
