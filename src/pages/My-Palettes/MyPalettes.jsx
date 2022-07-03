@@ -1,13 +1,18 @@
 import './MyPalettes.css';
 import { useEffect, useState } from 'react';
 import { getSavedPalettes, getFavoritesPalettes } from '../../utils/utils.js';
-import Palette from '../../components/Palette/Palette.jsx';
 import { AiFillWarning } from 'react-icons/ai';
+import { usePalettesContext } from '../../contexts/PalettesContext.jsx';
+import Palette from '../../components/Palette/Palette.jsx';
 
 export default function MyPalettes() {
 
-  const [palettes, setPalettes] = useState([]);
-  const [filter, setFilter] = useState('all');
+  const {
+    palettes,
+    setPalettes,
+    filter,
+    setFilter
+  } = usePalettesContext();
 
   useEffect(() => {
     setPalettes(
@@ -32,7 +37,7 @@ export default function MyPalettes() {
       <div className='my-palettes-content'>
         {
           palettes.length 
-            ? palettes.map((palette, index) => <Palette key={ index } palette={ palette } setPalettes={ setPalettes } filter={ filter }/>)
+            ? palettes.map((palette, index) => <Palette key={ index } palette={ palette }/>)
             : <div className='my-palettes-warning'>
                 <h1>
                   <AiFillWarning className='icon'/>
