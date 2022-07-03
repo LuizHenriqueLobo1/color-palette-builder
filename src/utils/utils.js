@@ -7,7 +7,8 @@ export function generateColorArray() {
 }
 
 function generateColor() {
-  return '#'.concat(Math.floor(Math.random() * 16777215).toString(16).toUpperCase());
+  const color = '#'.concat(Math.floor(Math.random() * 16777215).toString(16).toUpperCase());
+  return color.length === 7 ? color : color.concat('0'); 
 }
 
 export function getSavedPalettes() {
@@ -34,7 +35,6 @@ function generateId() {
 export function deleteSavedPalette(palette) {
   const palettes = getSavedPalettes();
   const targetPalette = getSpecificPalette(palettes, palette);
-  console.log(palettes.indexOf(targetPalette));
   palettes.splice(palettes.indexOf(targetPalette), 1);
   localStorage.setItem('palettes', JSON.stringify(palettes));
 }
