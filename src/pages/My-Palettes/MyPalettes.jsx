@@ -30,7 +30,7 @@ export default function MyPalettes() {
           className='my-palettes-actions-select'
           onChange={ (event) => setFilter(event.target.value) }
         >
-          <option value="all" selected>All</option>
+          <option value="all">All</option>
           <option value="favorites">Favorites</option>
         </select>
       </div>
