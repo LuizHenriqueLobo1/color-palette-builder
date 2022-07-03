@@ -17,7 +17,7 @@
 - [x] Copiar cor ao clicar
 - [x] Salvar paleta gerada
 - [x] Favoritar paleta
-- [ ] Filtragem de paletas
+- [x] Filtragem de paletas
 - [x] Excluir paleta salva
 - [x] Página de ajuda
 
