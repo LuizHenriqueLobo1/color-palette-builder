@@ -2,7 +2,7 @@ import './Palette.css';
 import { IoMdTrash } from 'react-icons/io';
 import { MdStar, MdStarBorder } from 'react-icons/md';
 import { usePalettesContext } from '../../contexts/PalettesContext';
-import { deleteSavedPalette, favoritePalette, copyHexColor, getSavedPalettes, getFavoritesPalettes } from '../../utils/utils';
+import { deleteSavedPalette, favoritePalette, copyHexColor, getPaletteOrderBy } from '../../utils/utils';
 
 export default function Palette({ palette }) {
   
@@ -16,7 +16,7 @@ export default function Palette({ palette }) {
           onClick={ 
             () => {
               favoritePalette(palette);
-              setPalettes(filter === 'all' ? getSavedPalettes() : getFavoritesPalettes());
+              setPalettes(getPaletteOrderBy(filter));
             }
           }
         >
@@ -31,7 +31,7 @@ export default function Palette({ palette }) {
           onClick={ 
             () => {
               deleteSavedPalette(palette);
-              setPalettes(filter === 'all' ? getSavedPalettes() : getFavoritesPalettes());
+              setPalettes(getPaletteOrderBy(filter));
             }
           }
         >

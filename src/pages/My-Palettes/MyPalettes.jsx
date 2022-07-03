@@ -1,6 +1,6 @@
 import './MyPalettes.css';
-import { useEffect, useState } from 'react';
-import { getSavedPalettes, getFavoritesPalettes } from '../../utils/utils.js';
+import { useEffect } from 'react';
+import { getPaletteOrderBy } from '../../utils/utils.js';
 import { AiFillWarning } from 'react-icons/ai';
 import { usePalettesContext } from '../../contexts/PalettesContext.jsx';
 import Palette from '../../components/Palette/Palette.jsx';
@@ -15,11 +15,7 @@ export default function MyPalettes() {
   } = usePalettesContext();
 
   useEffect(() => {
-    setPalettes(
-      filter === 'all' 
-        ? getSavedPalettes() 
-        : getFavoritesPalettes()
-    );
+    setPalettes(getPaletteOrderBy(filter));
   }, [ filter ]);
 
   return (
