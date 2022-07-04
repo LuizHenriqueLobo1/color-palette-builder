@@ -4,7 +4,7 @@
 
 ### Sobre
 
-> Esta é uma simples aplicação implementada em [React](https://pt-br.reactjs.org/) com a intenção de fornecer uma ferramente de criação de paleta de cores para seus usuários, o projeto tem como inspiração o site [Coolors](https://coolors.co/).
+> Esta é uma simples aplicação implementada em [React](https://pt-br.reactjs.org/) com a intenção de fornecer uma ferramente de criação de paleta de cores para seus usuários, o projeto foi criado utilizando [Vite](https://vitejs.dev/) e tem como principal inspiração o projeto [Coolors](https://coolors.co/).
 
 ### Demonstração
 
@@ -20,6 +20,12 @@
 - [x] Filtragem de paletas
 - [x] Excluir paleta salva
 - [x] Página de ajuda
+
+### Como fazer funcionar?
+
+* Clone o projeto: `https://github.com/LuizHenriqueLobo1/Color-Palette-Builder.git`
+* Instale as dependências: `npm i`
+* Rode o projeto: `npm run dev`
 
 ---
 
