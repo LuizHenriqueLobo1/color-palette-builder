@@ -1,0 +1,74 @@
+.modal-background {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(200, 200, 200, 0.800);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat'
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  width:  400px;
+  background: #FAFAFA;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.modal-container-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-container-header-title {
+  margin-bottom: 5px;
+}
+
+.modal-container-header-description {
+  margin-bottom: 40px;
+}
+
+.modal-container-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.modal-container-actions-field-button {
+  border: none;
+  border-radius: 10px;
+  font-family: 'Montserrat';
+  cursor: pointer;
+  background: #FAFAFA;
+  font-size: 12pt;
+  outline: none;
+  padding: 6px;
+}
+
+.modal-container-actions-field-button:hover {
+  transition: 250ms;
+  background: #292929;
+  color: #FAFAFA;
+}
+
+.confirm {
+  background: #292929;
+  color: #FAFAFA;
+}
+
+.confirm:hover {
+  transition: 250ms;
+  background: #AAD0FCD1;
+  color: #292929;
+}
+
+.cancel:hover {
+  transition: 250ms;
+  background: #B84E6CD1;
+  color: #FAFAFA;
+}
