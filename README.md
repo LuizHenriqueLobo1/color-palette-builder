@@ -19,6 +19,7 @@
 - [x] Favoritar paleta
 - [x] Filtragem de paletas
 - [x] Excluir paleta salva
+- [x] Excluir todas as paletas
 - [x] Página de ajuda
 
 ### Como fazer funcionar?

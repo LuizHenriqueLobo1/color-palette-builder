@@ -6,12 +6,38 @@
 }
 
 .my-palettes-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
   background: #353535;
   color: #FAFAFA;
   font-family: 'Montserrat';
   margin-top: 80px;
   padding: 8px;
-  text-align: right;
+}
+
+.my-palettes-field {
+  margin-left: 20px;
+}
+
+.last-field {
+  margin-right: 10px;
+}
+
+.my-palettes-field-button {
+  border: none;
+  border-radius: 10px;
+  font-family: 'Montserrat';
+  cursor: pointer;
+  background: #FAFAFA;
+  font-size: 12pt;
+  outline: none;
+}
+
+.my-palettes-field-button:hover {
+  transition: 250ms;
+  background: #292929;
+  color: #FAFAFA;
 }
 
 .my-palettes-actions-select {

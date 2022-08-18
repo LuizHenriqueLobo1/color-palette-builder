@@ -39,6 +39,10 @@ export function deleteSavedPalette(palette) {
   localStorage.setItem('palettes', JSON.stringify(palettes));
 }
 
+export function deleteAllSavedPalettes() {
+  localStorage.setItem('palettes', JSON.stringify([]));
+}
+
 export function copyHexColor(color) {
   navigator.clipboard.writeText(color);
 }
