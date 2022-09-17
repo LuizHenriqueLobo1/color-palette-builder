@@ -1,12 +1,20 @@
 import './Palette.css';
+import { useState } from 'react';
 import { IoMdTrash } from 'react-icons/io';
 import { MdStar, MdStarBorder } from 'react-icons/md';
 import { usePalettesContext } from '../../contexts/PalettesContext';
-import { deleteSavedPalette, favoritePalette, copyHexColor, getPaletteOrderBy } from '../../utils/utils';
+import { 
+  deleteSavedPalette, 
+  favoritePalette, 
+  copyHexColor, 
+  getPaletteOrderBy,
+  savePaletteName
+} from '../../utils/utils';
 
 export default function Palette({ palette }) {
   
   const { setPalettes, filter } = usePalettesContext();
+  const [ paletteName, setPaletteName ] = useState(palette.name ? palette.name : '');
 
   return (
     <div className='palette-container'>
@@ -16,6 +24,14 @@ export default function Palette({ palette }) {
             className='palette-name'
             placeholder='Add a name to palette...'
             type='text'
+            value={ paletteName }
+            onChange={ 
+              event => {
+                setPaletteName(event.target.value);
+                savePaletteName(event.target.value, palette);
+                setPalettes(getPaletteOrderBy(filter));
+              }
+            }
           />
         </div>
         <div>

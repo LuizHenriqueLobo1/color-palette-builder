@@ -66,3 +66,11 @@ function getFavoritesPalettes() {
 function getSpecificPalette(palettes, palette) {
   return palettes.find(({ id }) => id === palette.id);
 }
+
+export function savePaletteName(name, palette) {
+  const palettes = getSavedPalettes();
+  const targetPalette = getSpecificPalette(palettes, palette);
+  const targetPaletteIndex = palettes.indexOf(targetPalette);
+  palettes[targetPaletteIndex].name = name;
+  localStorage.setItem('palettes', JSON.stringify(palettes));
+}
