@@ -11,32 +11,41 @@ export default function Palette({ palette }) {
   return (
     <div className='palette-container'>
       <div className='palette-header'>
-        <span 
-          className='palette-action'
-          onClick={ 
-            () => {
-              favoritePalette(palette);
-              setPalettes(getPaletteOrderBy(filter));
+        <div>
+          <input
+            className='palette-name'
+            placeholder='Add a name to palette...'
+            type='text'
+          />
+        </div>
+        <div>
+          <span 
+            className='palette-action'
+            onClick={ 
+              () => {
+                favoritePalette(palette);
+                setPalettes(getPaletteOrderBy(filter));
+              }
             }
-          }
-        >
-          {
-            palette.favorite
-              ? <MdStar className='icon'/>
-              : <MdStarBorder className='icon'/>
-          }
-        </span>
-        <span 
-          className='palette-action' 
-          onClick={ 
-            () => {
-              deleteSavedPalette(palette);
-              setPalettes(getPaletteOrderBy(filter));
+          >
+            {
+              palette.favorite
+                ? <MdStar className='icon'/>
+                : <MdStarBorder className='icon'/>
             }
-          }
-        >
-          <IoMdTrash className='icon'/>
-        </span>
+          </span>
+          <span 
+            className='palette-action' 
+            onClick={ 
+              () => {
+                deleteSavedPalette(palette);
+                setPalettes(getPaletteOrderBy(filter));
+              }
+            }
+          >
+            <IoMdTrash className='icon'/>
+          </span>
+        </div>
       </div>
       <div className='palette-content'>
         <div className='palette-color palette-color-first' style={{ background: palette.colors[0] }}>
