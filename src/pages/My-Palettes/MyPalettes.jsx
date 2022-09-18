@@ -49,7 +49,7 @@ export default function MyPalettes() {
               className='my-palettes-search'
               placeholder='My palette...'
               type='text'
-              onChange={ event => setSearch(event.target.value) }
+              onChange={ event =>setSearch(event.target.value) }
             />
             <label className='my-palettes-label'>
               Show:
@@ -74,7 +74,7 @@ export default function MyPalettes() {
         <div className='my-palettes-content'>
           {
             palettes.length 
-              ? palettes.map((palette, index) => <Palette key={ index } palette={ palette }/>)
+              ? palettes.map((palette, index) => <Palette key={ index } palette={ palette }/> )
               : <div className='my-palettes-warning'>
                   <h1>
                     <AiFillWarning className='icon'/>

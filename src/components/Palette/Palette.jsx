@@ -13,7 +13,7 @@ import {
 
 export default function Palette({ palette }) {
   
-  const { setPalettes, filter } = usePalettesContext();
+  const { setPalettes, filter, search } = usePalettesContext();
   const [ paletteName, setPaletteName ] = useState(palette.name ? palette.name : '');
 
   return (
@@ -29,7 +29,7 @@ export default function Palette({ palette }) {
               event => {
                 setPaletteName(event.target.value);
                 savePaletteName(event.target.value, palette);
-                setPalettes(getPaletteOrderBy(filter));
+                setPalettes(getPaletteOrderBy(filter, search));
               }
             }
           />
@@ -40,7 +40,7 @@ export default function Palette({ palette }) {
             onClick={ 
               () => {
                 favoritePalette(palette);
-                setPalettes(getPaletteOrderBy(filter));
+                setPalettes(getPaletteOrderBy(filter, search));
               }
             }
           >
@@ -55,7 +55,7 @@ export default function Palette({ palette }) {
             onClick={ 
               () => {
                 deleteSavedPalette(palette);
-                setPalettes(getPaletteOrderBy(filter));
+                setPalettes(getPaletteOrderBy(filter, search));
               }
             }
           >

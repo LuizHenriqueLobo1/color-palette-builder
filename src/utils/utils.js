@@ -58,10 +58,11 @@ export function favoritePalette(palette) {
 
 export function getPaletteOrderBy(filter, search) {
   const palettes = filter === 'all' ? getSavedPalettes() : getFavoritesPalettes();
+  let filteredPalettes = [];
   if(search.length) {
-    return palettes.filter(({ name }) => name.toLowerCase().includes(search.toLowerCase()));
+    filteredPalettes = palettes.filter(({ name }) => name.toLowerCase().includes(search.toLowerCase()));
   }
-  return palettes;
+  return filteredPalettes.length ? filteredPalettes : palettes;
 }
 
 function getFavoritesPalettes() {
