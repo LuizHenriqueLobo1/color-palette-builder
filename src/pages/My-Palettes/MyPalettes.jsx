@@ -14,12 +14,14 @@ export default function MyPalettes() {
     palettes,
     setPalettes,
     filter,
-    setFilter
+    setFilter,
+    search,
+    setSearch
   } = usePalettesContext();
 
   useEffect(() => {
-    setPalettes(getPaletteOrderBy(filter));
-  }, [ filter ]);
+    setPalettes(getPaletteOrderBy(filter, search));
+  }, [ filter, search ]);
 
   function deleteAllPalettes() {
     deleteAllSavedPalettes();
@@ -40,10 +42,21 @@ export default function MyPalettes() {
       <div className='my-palettes-container'>
         <div className='my-palettes-actions'>
           <div className='my-palettes-field'>
-            <label>Show:</label>
+            <label className='my-palettes-label'>
+              Search palette:
+            </label>
+            <input
+              className='my-palettes-search'
+              placeholder='My palette...'
+              type='text'
+              onChange={ event => setSearch(event.target.value) }
+            />
+            <label className='my-palettes-label'>
+              Show:
+            </label>
             <select 
               className='my-palettes-actions-select'
-              onChange={ (event) => setFilter(event.target.value) }
+              onChange={ event => setFilter(event.target.value) }
             >
               <option value="all">All</option>
               <option value="favorites">Favorites</option>

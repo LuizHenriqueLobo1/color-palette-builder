@@ -40,8 +40,21 @@
   color: #FAFAFA;
 }
 
+.my-palettes-label {
+  margin-right: 10px;
+}
+
+.my-palettes-search {
+  width: 150px;
+  font-family: 'Montserrat';
+  margin-right: 10px;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
 .my-palettes-actions-select {
-  margin-left: 10px;
   outline: none;
   border: none;
   border-radius: 5px;

@@ -19,7 +19,8 @@ export function saveNewPalette(palette) {
   const newPalette = {
     id: generateId(),
     colors: palette,
-    favorite: false
+    favorite: false,
+    name: ''
   };
   const palettes = [...getSavedPalettes(), newPalette];
   localStorage.setItem('palettes', JSON.stringify(palettes));
@@ -55,8 +56,12 @@ export function favoritePalette(palette) {
   localStorage.setItem('palettes', JSON.stringify(palettes));
 }
 
-export function getPaletteOrderBy(filter) {
-  return filter === 'all' ? getSavedPalettes() : getFavoritesPalettes();
+export function getPaletteOrderBy(filter, search) {
+  const palettes = filter === 'all' ? getSavedPalettes() : getFavoritesPalettes();
+  if(search.length) {
+    return palettes.filter(({ name }) => name.toLowerCase().includes(search.toLowerCase()));
+  }
+  return palettes;
 }
 
 function getFavoritesPalettes() {
