@@ -18,7 +18,7 @@
 - [x] Salvar paleta gerada
 - [x] Favoritar paleta
 - [x] Nomear paleta
-- [ ] Pesquisar por paleta
+- [x] Pesquisar por paleta
 - [x] Filtragem de paletas
 - [x] Excluir paleta salva
 - [x] Excluir todas as paletas
