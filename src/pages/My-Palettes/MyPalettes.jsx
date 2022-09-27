@@ -50,6 +50,7 @@ export default function MyPalettes() {
               placeholder='My palette...'
               type='text'
               onChange={ event => setSearch(event.target.value) }
+              value={ search }
             />
             <label className='my-palettes-label'>
               Show:
@@ -57,6 +58,11 @@ export default function MyPalettes() {
             <select 
               className='my-palettes-actions-select'
               onChange={ event => setFilter(event.target.value) }
+              defaultValue={
+                filter === 'all'
+                ? 'all'
+                : 'favorites'
+              }
             >
               <option value="all">All</option>
               <option value="favorites">Favorites</option>
