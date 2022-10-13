@@ -23,10 +23,11 @@
 - [x] Excluir paleta salva
 - [x] Excluir todas as paletas
 - [x] Página de ajuda
+- [ ] Nome das cores
 
 ### Como fazer funcionar?
 
-* Clone o projeto: `https://github.com/LuizHenriqueLobo1/Color-Palette-Builder.git`
+* Clone o projeto: `https://github.com/LuizHenriqueLobo1/color-palette-builder.git`
 * Instale as dependências: `npm i`
 * Rode o projeto: `npm run dev`
 
